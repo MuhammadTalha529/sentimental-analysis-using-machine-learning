@@ -49,7 +49,7 @@ with st.expander("Analyze Your Text"):
 #     st.write(cleaned)
 
 pre = st.text_input('Clean Your Text: ')
-    if pre:
+if pre:
         st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True ,
                                  stopwords=True ,lowercase=True ,numbers=True , punct=True))
 
