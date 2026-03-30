@@ -32,7 +32,7 @@ with st.expander("Analyze Your Text"):
 pre = st.text_input('Clean Your Text: ')
 
 if pre:
-    cleaned = cleantext.clean(
+    cleaned = clean-text.clean(
         pre,
         clean_all=False,
         extra_spaces=True,
