@@ -50,8 +50,7 @@ with st.expander("Analyze Your Text"):
 
 pre = st.text_input('Clean Your Text: ')
 if pre:
-    st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True ,
-                            stopwords=True ,lowercase=True ,numbers=True , punct=True))
+    st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True , stopwords=True ,lowercase=True ,numbers=True , punct=True))
 
 with st.expander('Analyze Excel files'):
     st.write("_**Note**_ : Your file must contain the column Name 'tweets' that contain the text to be analyzed.")
