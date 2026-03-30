@@ -27,30 +27,22 @@ with st.expander("Analyze Your Text"):
             st.write(emoji.emojize("Negative Speech :disappointed_face:"))
 
         st.write('Subjectivity', round(blob.sentiment.subjectivity, 2))
-
-#     pre = st.text_input('Clean Your Text: ')
-
-# if pre:
-#     cleaned = cleantext.clean(
-#         pre,
-#         fix_unicode=True,
-#         to_ascii=True,
-#         lower=True,
-#         no_line_breaks=True,
-#         no_urls=True,
-#         no_emails=True,
-#         no_phone_numbers=True,
-#         no_numbers=True,
-#         no_digits=True,
-#         no_currency_symbols=True,
-#         no_punct=True
-#     )
-
-#     st.write(cleaned)
+        
 
 pre = st.text_input('Clean Your Text: ')
+
 if pre:
-    st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True , stopwords=True ,lowercase=True ,numbers=True , punct=True))
+    cleaned = cleantext.clean(
+        pre,
+        clean_all=False,
+        extra_spaces=True,
+        stopwords=True,
+        lowercase=True,
+        numbers=True,
+        punctuations=True   
+    )
+    st.write(cleaned)
+
 
 with st.expander('Analyze Excel files'):
     st.write("_**Note**_ : Your file must contain the column Name 'tweets' that contain the text to be analyzed.")
